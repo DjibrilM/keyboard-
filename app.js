@@ -20,7 +20,8 @@ let valueArray = []
 let valueOut = ''
 
 
-const enterValue = (value)=>{
+const enterValue = (value,event)=>{
+    event.preventDefault()
     valueArray.push(value);
     valueOut = valueArray.join('');
     outputEl.textContent = valueOut
@@ -50,16 +51,16 @@ outputEl.textContent = printValue;
 }
 
 //event anitialization 
-button1.addEventListener('click',()=>enterValue(1))
-button2.addEventListener('click',()=>enterValue(2))
-button3.addEventListener('click',()=>enterValue(3))
-button4.addEventListener('click',()=>enterValue(4))
-button5.addEventListener('click',()=>enterValue(5))
-button6.addEventListener('click',()=>enterValue(6))
-button7.addEventListener('click',()=>enterValue(7))
-button8.addEventListener('click',()=>enterValue(8))
-button9.addEventListener('click',()=>enterValue(9))
-button10.addEventListener('click',()=>enterValue('*'))
-zeroBtn.addEventListener('click',()=>enterValue(0))
-hash.addEventListener('click',()=>enterValue('#'))
+button1.addEventListener('click',(event)=>enterValue(1,event))
+button2.addEventListener('click',(event)=>enterValue(2,event))
+button3.addEventListener('click',(event)=>enterValue(3,event))
+button4.addEventListener('click',(event)=>enterValue(4,event))
+button5.addEventListener('click',(event)=>enterValue(5,event))
+button6.addEventListener('click',(event)=>enterValue(6,event))
+button7.addEventListener('click',(event)=>enterValue(7,event))
+button8.addEventListener('click',(event)=>enterValue(8,event))
+button9.addEventListener('click',(event)=>enterValue(9,event))
+button10.addEventListener('click',(event)=>enterValue('*',event))
+zeroBtn.addEventListener('click',(event)=>enterValue(0,event))
+hash.addEventListener('click',(event)=>enterValue('#',event))
 deleteBtn.addEventListener('click',()=> deleteLetter())

@@ -117,6 +117,8 @@ color: white;
 z-index: 1;
 position: relative;
 right: 20px;
+width: 200px;
+overflow: hidden;
 }
 
 /* //backdrop */
@@ -220,6 +222,7 @@ width: 10px;
 height: 70px;
 padding-top: 20px;
 font-size: 20px;
+overflow: hidden;
 }
 
 .cutomer-popup
