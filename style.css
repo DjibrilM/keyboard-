@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body
+{
+    box-sizing: border-box;
+    background-color: rgb(53, 50, 50);
+}
+
+.phone-container
+{
+    max-width: 500px;
+    height: 750px;
+    background:#111;
+    position: relative;
+}
+.range
+{
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.range button
+{
+margin: 20px;
+padding: 45px;
+height: 80px;
+width: 80px;
+border-radius: 100%;
+display: flex;
+align-items: center;
+justify-content:center ;
+flex-direction: column;
+border: none;
+font-family: 'Quicksand', sans-serif;
+background-color: #333;
+color: #fff;
+cursor: pointer;
+}
+.range button:active
+{
+transform: scale(0.9);
+box-shadow: 0 1px 4px #555;
+background: linear-gradient(#333,#444);
+}
+.range-one button:nth-child(1) span
+{
+opacity: 0;
+}
+.range button h1
+{
+font-size: 40px;
+}
+.star
+{
+position: relative;
+top: 5px;
+}
+.submit-btn
+{
+    margin: 20px;
+    height: 85px;
+    width: 85px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:center ;
+    flex-direction: column;
+    border: none;
+    font-family: 'Quicksand', sans-serif;
+    background-color: #45a849;
+    color: #fff;
+    cursor: pointer;
+}
+.submit-btn:active
+{
+transform: scale(0.9);
+}
+.submit-btn img
+{
+    width: 45px;
+}
+
+/* //output  */
+.value-output
+{
+/* padding: 25px 0pc; */
+height: 70px;
+padding-top: 15px;
+}
+.clear
+{
+position: absolute;
+background-color: transparent;
+border: none;
+border: 3px solid #fff;
+border-radius: 100%;
+padding: 10px;
+cursor: pointer;
+height: 10px;
+width: 10px;
+display: flex;
+align-items: center;
+justify-content: center;
+right: 100px;
+top: 35px;
+z-index: 2;
+}
+.out-put
+{
+font-family: 'Quicksand', sans-serif;
+color: white;
+z-index: 1;
+position: relative;
+right: 20px;
+}
+
+/* //backdrop */
+.backdrop
+{
+width: 100%;
+height: 100vh;
+background-color: rgb(17, 17, 17, 0.5);
+backdrop-filter: blur(10px);
+position: fixed;
+top: 0;
+left: 0;
+z-index: 5;
+display: none;
+}
+
+.cutomer-popup
+{
+width: 500px;
+height: 200px;
+background-color: #333;
+position: absolute;
+z-index: 7;
+margin-top: 50px;
+box-shadow: 1px 4px 14px rgb(0, 0, 0, 0.5);
+overflow: hidden;
+text-align: left;
+transform: translatey(-200%);
+transition: 1s;
+right: 11%;
+}
+
+.cutomer-popup h2
+{
+padding: 20px;
+display: flex;
+gap: 10px;
+color: white;
+}
+.loading-bar
+{
+position: absolute;
+bottom: 0;
+width: 90%;
+padding: 3px;
+background-color: rgb(229, 229, 15);
+}
+
+
+.openPopup {
+    position: relative;
+    transform: translatey(0%);
+    right: auto;
+}
+.bar-close
+{
+width: 0px;
+transition: 3s;
+}
+.openBackdrop 
+{
+    display: block;
+}
+
+@media(max-width:472px){
+    .range button
+    {
+    padding: 30px;
+    height: 70px;
+    width: 70px;
+    }
+
+   .range button h1
+   {
+   font-size: 23px;
+   }
+
+   .submit-btn
+{
+    height: 65px;
+    width: 65px;
+}
+.submit-btn img
+{
+    width: 35px;
+}
+.clear
+{
+right: 40px;
+height: 5px;
+width: 5px;
+padding: 7px;
+}
+.clear img
+{
+width: 10px;
+}
+.out-put
+{
+/* padding: 25px 0pc; */
+height: 70px;
+padding-top: 20px;
+font-size: 20px;
+}
+
+.cutomer-popup
+{
+max-width: 300px;
+height: 200px;
+font-size: 10px;
+}
+
+}
